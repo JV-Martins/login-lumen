@@ -13,7 +13,7 @@
 |
 */
 $router->get('/', function () use ($router) {
-    return "URL Inválida!!<br> Para recuperar os usuário acesse https://login-api-backend-qz5ms.ondigitalocean.app/users";
+    return view('index.html');
 });
 
 $router->get('/users[/{id}]','UserController@show');
