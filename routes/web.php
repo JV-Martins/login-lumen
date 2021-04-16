@@ -13,7 +13,7 @@
 |
 */
 $router->get('/', function () use ($router) {
-    return view('index.html');
+    return view('index');
 });
 
 $router->get('/users[/{id}]','UserController@show');
