@@ -12,10 +12,9 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-$router->get('/users', function () use ($router) {
+$router->get('/', function () use ($router) {
     return "URL Inválida";
 });
 
-$router->get('/users', function () use ($router) {
-    return \App\Models\User::all();
-});
+$router->get('/users[/{id}]','UserController@show');
+$router->post('/users','UserController@create');
